@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDCDC"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="368dp"
+        android:layout_height="279dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="22dp"
+        android:background="#FFFFFF"
+        android:text="Output"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/userIn"
+        android:layout_width="363dp"
+        android:layout_height="261dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="26dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:text="Type here: normal text or Morse code using '.', '-', separating letters by spaces and words by ' _ '"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/translateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="162dp"
+        android:background="#FFFFFF"
+        android:text="Translate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultText" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="392dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userIn">
+
+        <RadioButton
+            android:id="@+id/toTextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="onRadioButtonClicked"
+            android:paddingRight="10px"
+            android:text="To Text" />
+
+        <RadioButton
+            android:id="@+id/toMorseCodeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="onRadioButtonClicked"
+            android:text="To Morse Code" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
